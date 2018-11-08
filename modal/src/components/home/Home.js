@@ -5,6 +5,7 @@
 // if user dismisses the modal, it should pop up again after 10 seconds
 
 import React, { Component } from 'react';
+import TimedModal from '../modal/modal'
 import './home.css'
 
 
@@ -13,6 +14,7 @@ class Home extends Component {
         return (
             <div>
                 <p>Home Page</p>
+                < TimedModal />
             </div>
         );
     }
