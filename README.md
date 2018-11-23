@@ -1,5 +1,5 @@
 # ReactModal
-Simple site that renders a react modal asking the user 'are you still there?' after 10 seconds. Built using ReactJS.
+Simple site that renders a react modal asking the user 'are you still there?' after 10 minutes. Built using ReactJS.
 
 ### Requirements:
 * Node.js
