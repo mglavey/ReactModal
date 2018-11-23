@@ -1,54 +1,39 @@
 import React, { Component } from 'react';
 import Modal from 'react-responsive-modal';
 
+
 class TimedModal extends Component {
-    // setting initial state with a constructor
-    // constructor(props){
-    //     super(props)
-    //     this.state = {
-    //         open: false,
-    //     }
-    // }
-   
-    // 'vanilla' modal logic 
-    // state = {
-    //     open: false,
-    // };
+    constructor() {
+        super();
+        this.state = {
+            open : false
+        };
+        this.showModal = this.showModal.bind(this);
+    }
 
-    // onOpenModal = () => {
-    //     this.setState({ open: true });
-    // };
+    showModal () {
+        setTimeout(() => {
+            this.setState({ open: true });
+            }, 10000);
+        console.log('Show modal ');
+    }
 
-    // onCloseModal = () => {
-    //     this.setState({ open: false });
-    // };
+    componentDidMount() {
+        this.showModal();
+    }
 
-
-    // 'vanilla' modal render
-    // render() {
-    //     return (
-    //         <div>
-    //             <button onClick={this.onOpenModal}>Open modal</button>
-    //             <Modal open={open} onClose={this.onCloseModal} center>
-    //                 <h2>Modal</h2>
-    //             </Modal>
-    //         </div>
-    //     );
-    // }
-
-
-    // state = {
-    //     open: false
-    // }
-    
-    // componentDidMount() {
-    //     this.setState({
-
-    //     })
-    // 
+    render() {
+        return (
+            <div>
+                {/* <button onClick={this.onOpenModal}>Open modal</button> */}
+                <Modal open={this.state.showModal}>
+                    <h2>Modal</h2>
+                </Modal>
+            </div>
+        );
+    }
 }
 
 
 export default TimedModal;
-
 
